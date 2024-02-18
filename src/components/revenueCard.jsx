@@ -3,7 +3,7 @@ export const RevenueCard = ({
     title,
     orderCount
 }) => {
-    return <div className="bg-white rounded shadow-md p-4">
+    return <div className="bg-white flex-grow min-w-[300px] rounded-[8px] shadow-md p-4">
         <div className="flex m-2 text-gray-600">
             <div className="mr-2">{title}</div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

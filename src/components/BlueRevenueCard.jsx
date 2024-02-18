@@ -2,9 +2,8 @@ export const BlueRevenueCard = ({
     title,
     amount,
     orderCount,
-    nextPayDate
 }) => {
-    return <div className="rounded-[8px] shadow-md flex-grow hover:bg-[#0E4F82] bg-[#146EB4]">
+    return <div className="rounded-[8px] shadow-md min-w-[300px] flex-grow hover:bg-[#0E4F82] bg-[#146EB4]">
         <div className="flex flex-col   p-4 ">
             <div className="flex m-2 text-white">
                 <div className="mr-2">{title}</div>
