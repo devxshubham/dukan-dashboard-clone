@@ -1,5 +1,6 @@
 import { BlueRevenueCard } from "./BlueRevenueCard"
 import { RevenueCard } from "./revenueCard"
+import { TableSearch } from "./TableSearch"
 import { TransactionTable } from "./TransactionTable"
 
 export const Content = () => {
@@ -30,6 +31,7 @@ export const Content = () => {
             </div>
         </div>
 
+        <TableSearch></TableSearch>
         <TransactionTable></TransactionTable>
     </main>
 }
