@@ -1,15 +1,17 @@
 import {useRecoilState} from 'recoil'
-import { sideAtom } from '../store/atom/sideAtom'
+import { isOpenAtom } from '../store/atom/isOpenAtom'
 
 
 export const Navbar = () => {
-    const [ side , setSide ] = useRecoilState(sideAtom)
-    return <header className="flex justify-between px-8 py-3 border-b">
+    const [ isOpen, setOpen ] = useRecoilState(isOpenAtom)
+    return <header className={`flex justify-between px-8 py-3 border-b
+        ${ isOpen ? "opacity-50" : "opacity-100"}
+    `}>
         <div className="flex items-center  gap-3">
             <button className=" lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"
              onClick={() => {
-                (side==true) ? setSide(false) : setSide(true) ;
+                setOpen( !isOpen );
              }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
@@ -40,6 +42,15 @@ export const Navbar = () => {
                 </svg>
 
             </div>
+
         </div>
+        <button className={`absolute right-1 top-1 border-2 border-black   rounded
+            ${ isOpen 
+                ? "absolute"
+                : "hidden"
+            }`}
+            onClick={()=>{
+                setOpen(false)
+            }}>close</button>
     </header>
 }

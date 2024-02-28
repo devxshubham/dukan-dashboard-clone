@@ -1,10 +1,17 @@
 import { useRecoilValue } from "recoil"
-import { sideAtom } from "../store/atom/sideAtom"
+import { isOpenAtom } from "../store/atom/isOpenAtom"
 
 export const SideBar = () => {
-    const side = useRecoilValue(sideAtom)
+    const isOpen = useRecoilValue(isOpenAtom)
     
-    return <div className={`${(side%2==0) ? "flex" : "hidden lg:flex"} flex-col transition-all ease-in duration-900 delay-0 static lg:sticky top-0 left-0 bottom-0 justify-between h-[100dvh] min-w-[224px] py-[16px] px-[10px] bg-[#1E2640] text-white`}>
+    return <div 
+        className={` lg:flex flex-col transition-all ease-in duration-900 delay-0 absolute top-0 left-0 bottom-0 justify-between h-[100dvh] min-w-[224px] py-[16px] px-[10px] bg-[#1E2640] text-white
+            ${ isOpen
+                ? "absolute"
+                : "hidden sticky"
+                
+            }
+        `}>
         <div className="flex flex-col gap-6">
             <div className="flex justify-between w-fit mx-auto items-center gap-3">
                 <div className="w-[40px] h-[40px] m-[.1px]">

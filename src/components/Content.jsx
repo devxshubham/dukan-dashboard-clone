@@ -3,8 +3,15 @@ import { RevenueCard } from "./revenueCard"
 import { TableSearch } from "./TableSearch"
 import { TransactionTable } from "./TransactionTable"
 
+import { isOpenAtom } from "../store/atom/isOpenAtom"
+import { useRecoilValue } from "recoil"
+
 export const Content = () => {
-    return <main className="flex flex-col gap-8 p-3">
+    const isOpen = useRecoilValue(isOpenAtom)
+
+    return <main className={`flex flex-col gap-8 p-3
+
+        `}>
         <div className="flex justify-between items-center mb-5">
             <h5 className="text-xl font-medium">Overview</h5>
             <button className="flex border rounded font-l py-[6px] px-[14px] text-[#4D4D4D] gap-3">
