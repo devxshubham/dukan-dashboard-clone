@@ -44,13 +44,15 @@ export const Navbar = () => {
             </div>
 
         </div>
-        <button className={`absolute right-1 top-1 border-2 border-black   rounded
-            ${ isOpen 
-                ? "absolute"
-                : "hidden"
-            }`}
-            onClick={()=>{
-                setOpen(false)
-            }}>close</button>
+        <div className={` top-5 right-5 border-2 bg-white border-black text-medium font-medium  rounded
+                ${ isOpen 
+                    ? "absolute"
+                    : "hidden"
+                }`}>
+            <button className="p-2" 
+                onClick={()=>{
+                    setOpen(false)
+                }}>close</button>
+        </div>
     </header>
 }

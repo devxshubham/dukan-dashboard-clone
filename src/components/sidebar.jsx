@@ -1,11 +1,11 @@
-import { useRecoilValue } from "recoil"
+import { useRecoilState, useRecoilValue } from "recoil"
 import { isOpenAtom } from "../store/atom/isOpenAtom"
 
 export const SideBar = () => {
-    const isOpen = useRecoilValue(isOpenAtom)
+    const [isOpen, setOpen] = useRecoilState(isOpenAtom)
     
     return <div 
-        className={` lg:flex flex-col transition-all ease-in duration-900 delay-0 absolute top-0 left-0 bottom-0 justify-between h-[100dvh] min-w-[224px] py-[16px] px-[10px] bg-[#1E2640] text-white
+        className={` lg:flex flex-col z-10 transition-all ease-in duration-900 delay-0 absolute top-0 left-0 bottom-0 justify-between h-[100dvh] min-w-[224px] py-[16px] px-[10px] bg-[#1E2640] text-white
             ${ isOpen
                 ? "absolute"
                 : "hidden sticky"
