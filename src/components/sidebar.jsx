@@ -1,13 +1,27 @@
 import { useRecoilState, useRecoilValue } from "recoil"
 import { isOpenAtom } from "../store/atom/isOpenAtom"
+import { useEffect, useState } from "react"
 
 export const SideBar = () => {
     const [isOpen, setOpen] = useRecoilState(isOpenAtom)
+
+    const [width, setWidth] = useState(0);
+
+    // useEffect( ()=>{
+    //     function toggle  (){
+    //         console.log("function called")
+    //         if(window.innerWidth > 1024 ){
+    //             console.log("greater than lg")
+    //             setOpen(false);
+    //         }
+    //     }
+    //     toggle()
+    // },[width]) 
     
     return <div 
         className={` lg:flex flex-col z-10 transition-all ease-in duration-900 delay-0 absolute top-0 left-0 bottom-0 justify-between h-[100dvh] min-w-[224px] py-[16px] px-[10px] bg-[#1E2640] text-white
             ${ isOpen
-                ? "absolute"
+                ? "fixed"
                 : "hidden sticky"
                 
             }
