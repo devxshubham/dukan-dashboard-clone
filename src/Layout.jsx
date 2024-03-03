@@ -9,7 +9,7 @@ export const Layout = ()=>{
 
     return <div>
         { isOpen 
-            ?<div className="absolute inset-0 transition-opacity bg-gray-500 bg-opacity-75"></div>
+            ?<div className="fixed lg:hidden inset-0 transition-opacity bg-gray-500 bg-opacity-75"></div>
             : <div></div>
         }
 

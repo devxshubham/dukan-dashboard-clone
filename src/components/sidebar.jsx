@@ -19,10 +19,10 @@ export const SideBar = () => {
     // },[width]) 
     
     return <div 
-        className={` lg:flex flex-col z-10 transition-all ease-in duration-900 delay-0 absolute top-0 left-0 bottom-0 justify-between h-[100dvh] min-w-[224px] py-[16px] px-[10px] bg-[#1E2640] text-white
+        className={`lg:sticky lg:flex flex-col z-10 transition-all ease-in duration-900 delay-0 absolute top-0 left-0 bottom-0 justify-between h-[100dvh] min-w-[224px] py-[16px] px-[10px] bg-[#1E2640] text-white
             ${ isOpen
-                ? "fixed"
-                : "hidden sticky"
+                ? "fixed "
+                : "hidden "
                 
             }
         `}>

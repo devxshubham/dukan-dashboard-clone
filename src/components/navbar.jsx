@@ -44,7 +44,7 @@ export const Navbar = () => {
             </div>
 
         </div>
-        <div className={` top-5 right-5 border-2 bg-white border-black text-medium font-medium  rounded
+        <div className={` top-5 right-5 lg:hidden border-2 bg-white border-black text-medium font-medium  rounded
                 ${ isOpen 
                     ? "absolute"
                     : "hidden"
