@@ -5,7 +5,7 @@ import { navlink } from "../store/atom/svg"
 export const SideBar = () => {
     const isOpen = useRecoilValue(isOpenAtom)
 
-    return <div className={`fixed lg:sticky w-[224px] flex flex-col z-10  top-0 left-0 bottom-0 justify-between h-[100dvh]  px-[10px] py-[16px] transition-all duration-400 ease-in-out delay-0 bg-[#1E2640] text-white
+    return <div className={`fixed lg:sticky w-[224px] flex flex-col z-10  top-0 left-0  justify-between h-[100dvh]  px-[10px] py-[16px] transition-all duration-400 ease-in-out delay-0 bg-[#1E2640] text-white
             ${ isOpen
                 ?"translate-x-0 " : "-translate-x-full lg:translate-x-0 "
             }
@@ -13,7 +13,7 @@ export const SideBar = () => {
         <div className="flex mx-[10px] flex-col gap-6">
             <div className="flex justify-between w-fit mx-auto items-center gap-3">
                 <div className="w-[40px] h-[40px] m-[.1px]">
-                    <img className="object-cover object-center h-[100%] w-[100%] rounded" src="https://s3-alpha-sig.figma.com/img/18ef/52d9/1494ed3109e53ab9db09579cd5d8839e?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CfsRd2oMD1BF0jefyPcfOiL9-pod42UgixSOqDXZ3LBLsVZDcUfRFFNbqxYUAyNOLdvoXKQCag~I1EXlU3LxLLLNViGvBQuDw9kd9vqXz7EJ9uOvYYrBh0vTNl5-hGj4l~FevvCDKIyh6vNmIUJI7qotHaCohfgNYL00bQy1At2PBO7NiYYaSP~kO5zxvfpnoxNkdYFJzu~v7FVqKPDde3nv86LktLSQ5wcC0g4CNjcvpoRKDV4EunvQa3ztjolCmIiEDapYJgVVWahhFiWCt-BBUeFpTDdcXPjzkzgRJQTX916Vja64pisb-RpBkKDycQ5d6gCBPEKAoBsVNmmjfA__" alt="" />
+                    <img className="object-cover object-center h-[100%] w-[100%] rounded" src="https://ik.imagekit.io/vewzaaue0/dukaan/companyimage.png?updatedAt=1709642861191" alt="" />
                 </div>
                 <div className="flex flex-col justify-center w-[108px] gap-1">
                     <h5 className="font-medium leading-4">Nishyan</h5>
