@@ -1,4 +1,4 @@
-import { RecoilRoot, useRecoilValue } from "recoil"
+import { RecoilRoot} from "recoil"
 
 import { Layout } from "./components/Layout"
 import { SideBar } from "./components/sidebar"
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <RecoilRoot>
-      <div className="flex transition-all ease-in duration-900 delay-0">
+      <div className="flex">
           <SideBar></SideBar>
           <Layout></Layout>
       </div>
