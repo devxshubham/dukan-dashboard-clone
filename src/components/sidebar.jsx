@@ -5,9 +5,9 @@ import { navlink } from "../store/atom/svg"
 export const SideBar = () => {
     const isOpen = useRecoilValue(isOpenAtom)
 
-    return <div className={`fixed lg:sticky w-[224px] flex flex-col z-10  top-0 left-0  justify-between h-[100dvh]  px-[10px] py-[16px] transition-all duration-400 ease-in-out delay-0 bg-[#1E2640] text-white
+    return <div className={`fixed lg:sticky w-[224px]  flex flex-col z-10  top-0 left-0  justify-between  px-[10px] py-[16px] transition-all duration-400 ease-in-out delay-0 bg-[#1E2640] text-white
             ${ isOpen
-                ?"translate-x-0 " : "-translate-x-full lg:translate-x-0 "
+                ?"translate-x-0 h-full lg:h-[100dvh]" : "-translate-x-full lg:translate-x-0 h-[100dvh]"
             }
         `}>
         <div className="flex mx-[10px] flex-col gap-6">
