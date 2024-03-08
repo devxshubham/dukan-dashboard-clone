@@ -5,8 +5,8 @@ import { isOpenAtom } from '../store/atom/isOpenAtom'
 export const Navbar = () => {
     const [ isOpen, setOpen ] = useRecoilState(isOpenAtom)
 
-    return <header className={`flex  z-0 justify-between bg-white ${ !isOpen ? "sticky top-0" : ""} px-8 py-3 border-b`}>
-        <div className="flex items-center  gap-3">
+    return <header className={`flex gap-1 sm:gap-3  z-0 justify-between bg-white ${ !isOpen ? "sticky top-0" : ""} px-4 sm:px-8 py-3 border-b`}>
+        <div className="flex items-center gap-1 sm:gap-3">
             <button className=" lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"
              onClick={() => {
@@ -27,7 +27,7 @@ export const Navbar = () => {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
-            <input className=" outline-none bg-transparent" type="text" placeholder="Search features, tutorials" />
+            <input className=" w-[90px] flex sm:flex-grow sm:w-[200px] outline-none bg-transparent" type="text" placeholder="Search features, tutorials" />
         </div>
         <div className="flex items-center gap-2">
             <button className="p-2 bg-[#E6E6E6] rounded-full">

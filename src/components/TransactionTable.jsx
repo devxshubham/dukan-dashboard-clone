@@ -1,5 +1,6 @@
 export const TransactionTable = () => {
-    return <table class="table">
+    return <div className="overflow-x-auto">
+      <table className="table">
     <thead className= " text-[#4D4D4D]">
       <tr className="bg-[#f2f2f2] ">
         <th className=" px-3 py-[10px] text-left text-small font-medium tracking-wide rounded-l">Order ID</th>
@@ -94,4 +95,5 @@ export const TransactionTable = () => {
       
     </tbody>
   </table>
+    </div>
 }
